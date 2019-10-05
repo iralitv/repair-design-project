@@ -110,13 +110,90 @@
 
   <section class="videoControl">
       <div class="container">
-      <section class="heading-wrapper">
-        <h2>Video Control</h2>
-        <i class="fa fa-video-camera" aria-hidden="true"></i>
-      </section>
-        <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-          Sorry, your browser doesn't support embedded videos
-        </video>
+          <section class="videoControl__header heading">
+            <h2 class="heading__title">Video Control</h2>
+            <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
+          </section>
+          <video src="videofile.ogg" autoplay poster="posterimage.jpg">
+              Sorry, your browser doesn't support embedded videos
+          </video>
+          <hr class="main-divider">
+          <section class="videoControl__desc">
+            <p>At each facility, a camera is installed that broadcasts the progress
+            of work on the clock. At any time, you can go to our website and monitor
+            the progress of work in your apartment. You can watch the live broadcast
+            from one of our facilities! Leave a request below and you will receive a link to the broadcast.</p>
+          </section>
+          <form class="watching" action="">
+             <section class="watching__item">
+                <label for="watcher-name" class="watching__label">Name: </label>
+                <input type="text" id="watcher-name" placeholder="What is your name:">
+             </section>
+             <section class="watching__item">
+                <label for="watcher-phone" class="watching__label">Phone: </label>
+                <input type="text" id="watcher-phone" placeholder="Your phone number:">
+             </section>
+             <section class="watching__item">
+                <button class="watching__submit btn btn--fill" type="submit">Submit</button>
+             </section>
+             <section class="watching__item">
+                <label for="watcher-agree" class="watching__label">I agree to the processing of personal data</label>
+                <input type="checkbox" id="watcher-agree">
+             </section>
+          </form>
+      </div>
+  </section>
+
+  <section class="repair">
+      <div class="container">
+         <section class="repair__header heading">
+           <h2 class="heading__title">Types Of Repair</h2>
+           <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
+         </section>
+         <section class="repair__types">
+             <article class="repair__type repairCard">
+                 <img src="" alt="">
+                 <h3 class="repairCard__title">Redecorating</h3>
+                 <ul class="repairCard__list repairList">
+                     <li class="repairList__item">Dismantling of old coatings</li>
+                     <li class="repairList__item">Wallpapering</li>
+                     <li class="repairList__item">Painting walls and ceilings</li>
+                     <li class="repairList__item">Laying flooring</li>
+                     <li class="repairList__item">Replacing plumbing</li>
+                     <li class="repairList__item">Replacing sockets and switches</li>
+                     <li class="repairList__item">Replacing doors</li>
+                 </ul>
+                 <button class="repairCost btn btn--fill" type="button">from 900 rub / m2</button>
+             </article>
+             <article class="repair__type repairCard">
+                 <img src="" alt="">
+                 <h3 class="repairCard__title">Overhaul</h3>
+                 <ul class="repairCard__list repairList">
+                     <li class="repairList__item">Dismantling of old coatings</li>
+                     <li class="repairList__item">Wallpapering</li>
+                     <li class="repairList__item">Painting walls and ceilings</li>
+                     <li class="repairList__item">Laying flooring</li>
+                     <li class="repairList__item">Replacing plumbing</li>
+                     <li class="repairList__item">Replacing sockets and switches</li>
+                     <li class="repairList__item">Replacing doors</li>
+                 </ul>
+                 <button class="repairCost btn btn--fill" type="button">from 1800 rub / m2</button>
+             </article>
+             <article class="repair__type repairCard">
+                 <img src="" alt="">
+                 <h3 class="repairCard__title">Designer Repair</h3>
+                 <ul class="repairCard__list repairList">
+                     <li class="repairList__item">Dismantling of old coatings</li>
+                     <li class="repairList__item">Wallpapering</li>
+                     <li class="repairList__item">Painting walls and ceilings</li>
+                     <li class="repairList__item">Laying flooring</li>
+                     <li class="repairList__item">Replacing plumbing</li>
+                     <li class="repairList__item">Replacing sockets and switches</li>
+                     <li class="repairList__item">Replacing doors</li>
+                 </ul>
+                 <button class="repairCost btn btn--fill" type="button">from 4000 rub / m2</button>
+             </article>
+         </section>
       </div>
   </section>
 
