@@ -1,4 +1,5 @@
 @import url(http://allfont.ru/allfont.css?fonts=futurademictt-normal);
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
 
 $color-bg-header: #131313;
 $color-main: #E3B873;
@@ -6,7 +7,9 @@ $color-text: #ffffff;
 
 $font-base-size: 14px;
 $font-base-family: 'FuturaDemiCTT Normal', arial;
+
 $padding-base: 10px;
+$margin-base: 10px;
 
 @mixin d-flex($justify-content: normal, $align-items: normal){
   display: flex;
@@ -21,10 +24,22 @@ $padding-base: 10px;
   padding: $text-padding;
 }
 
+@mixin normal-text($font-size,  $text-color, $text-padding) {
+  font-size: $font-size;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: $text-color;
+  padding: $text-padding 0;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: $font-base-family;
+}
+
+a {
+  cursor: pointer;
 }
 
 .btn {
@@ -32,6 +47,27 @@ $padding-base: 10px;
   border-radius: 3px;
   @include heading-text(0.9*$font-base-size, $color-text, 1.3*$padding-base 3*$padding-base);
   background-color: transparent;
+  cursor: pointer;
+  &:hover{
+    box-shadow:
+    1px 1px $color-main,
+    2px 2px $color-main,
+    3px 3px $color-main;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  &--fill {
+    background-color: $color-main;
+    border: 1px solid $color-main;
+    &:hover {
+      box-shadow:
+      1px 1px $color-text,
+      2px 2px $color-text,
+      3px 3px $color-text;
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+  }
 }
 
 .container {
@@ -108,6 +144,27 @@ $padding-base: 10px;
   }
   &__desc {
     width: 95%;
-    background: url("../img/pasteboard-bg.png") no-repeat;
+    padding: 20*$padding-base 0 0 6*$padding-base;
+
+  }
+  &__title {
+    font-family: "Yeseva One";
+    @include heading-text(2.875*$font-base-size, $color-text, 0);
+    font-weight: lighter;
+    &--city {
+      font-family: inherit;
+      color: $color-main;
+    }
+  }
+  &__subtitle {
+    @include normal-text(1.5*$font-base-size, $color-text, 2*$padding-base 0 4.5*$padding-base);
+    max-width: 500px;
+  }
+  &__btn {
+    width: 207px;
+    padding: 2*$padding-base 0;
+    &:first-child {
+      margin-right: $margin-base;
+    }
   }
 }
