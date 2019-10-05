@@ -124,21 +124,21 @@
             the progress of work in your apartment. You can watch the live broadcast
             from one of our facilities! Leave a request below and you will receive a link to the broadcast.</p>
           </section>
-          <form class="watching" action="">
-             <section class="watching__item">
-                <label for="watcher-name" class="watching__label">Name: </label>
-                <input type="text" id="watcher-name" placeholder="What is your name:">
+          <form class="watchingForm form" action="">
+             <section class="form__item">
+                <label for="watcher-name" class="form__label">Name: </label>
+                <input type="text" class="form__input" id="watcher-name" placeholder="What is your name:">
              </section>
-             <section class="watching__item">
-                <label for="watcher-phone" class="watching__label">Phone: </label>
-                <input type="text" id="watcher-phone" placeholder="Your phone number:">
+             <section class="form__item">
+                <label for="watcher-phone" class="form__label">Phone: </label>
+                <input type="text" class="form__input" id="watcher-phone" placeholder="Your phone number:">
              </section>
-             <section class="watching__item">
+             <section class="form__item">
                 <button class="watching__submit btn btn--fill" type="submit">Submit</button>
              </section>
-             <section class="watching__item">
-                <label for="watcher-agree" class="watching__label">I agree to the processing of personal data</label>
-                <input type="checkbox" id="watcher-agree">
+             <section class="form__item">
+                <label for="watcher-agree" class="form__label">I agree to the processing of personal data</label>
+                <input type="checkbox" class="form__input" id="watcher-agree">
              </section>
           </form>
       </div>
@@ -196,7 +196,47 @@
          </section>
       </div>
   </section>
-
+  <section class="measure">
+    <div class="container">
+        <ul class="measure__stages stageList">
+           <li class="stageList__stage">Our specialist will arrive for measurements per day
+                                        contact, or appoint a date convenient for you</li>
+           <li class="stageList__stage">Free metering</li>
+           <li class="stageList__stage">Free consultation</li>
+           <li class="stageList__stage">Get a cost estimate and
+                                        the timing of your future repairs</li>
+        </ul>
+        <form class="measureForm form" action="" method="post">
+            <fieldset>
+                <legend>Leave a request for free
+                        departure of the measurer</legend>
+                <section class="form__item">
+                    <label for="measure-name" class="form__label">Name</label>
+                    <input type="text" class="form__input" id="measure-name" placeholder="What is your name:">
+                </section>
+                <section class="form__item">
+                    <label for="measure-phone" class="form__label">Phone</label>
+                    <input type="text" class="form__input" id="measure-phone" placeholder="Your phone number: ">
+                </section>
+                <section class="form__item">
+                    <label for="measure-email" class="form__label">Email</label>
+                    <input type="text" class="form__input" id="measure-email" placeholder="Your email: ">
+                </section>
+                <section class="form__item">
+                    <label for="measure-agree" class="form__label">I agree to the processing of personal data</label>
+                    <input type="checkbox" id="measure-agree" class="form__input">
+                </section>
+                <section class="form__item">
+                    <button class="btn btn--fill" type="submit">Call the message</button>
+                </section>
+            </fieldset>
+        </form>
+        <section class="measureBonus">
+            <div class="measureBonus__icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+            <p class="measureBonus__text">Help save 10 - 20% of the cost of materials</p>
+        </section>
+    </div>
+  </section>
 
 </main>
 
