@@ -88,6 +88,7 @@ a {
   @include d-flex(center, center);
   &__title {
     @include heading-text($font-base-size, $color-main, 0);
+    white-space: nowrap;
   }
 }
 
