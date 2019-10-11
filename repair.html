@@ -115,10 +115,12 @@
   <section class="videoControl">
       <div class="container">
           <section class="videoControl__header heading">
-            <h2 class="heading__title">Video Control</h2>
-            <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
+            <h2 class="heading__title">Online Control</h2>
+            <div class="heading__wrapper">
+              <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
+            </div>
           </section>
-          <video src="videofile.ogg" autoplay poster="posterimage.jpg">
+          <video class="videoControl__video" src="videofile.ogg" width="820" height="430" autoplay poster="posterimage.jpg">
               Sorry, your browser doesn't support embedded videos
           </video>
           <hr class="main-divider">
@@ -128,22 +130,25 @@
             the progress of work in your apartment. You can watch the live broadcast
             from one of our facilities! Leave a request below and you will receive a link to the broadcast.</p>
           </section>
-          <form class="watchingForm form" action="">
-             <section class="form__item">
-                <label for="watcher-name" class="form__label">Name: </label>
-                <input type="text" class="form__input" id="watcher-name" placeholder="What is your name:">
-             </section>
-             <section class="form__item">
-                <label for="watcher-phone" class="form__label">Phone: </label>
-                <input type="text" class="form__input" id="watcher-phone" placeholder="Your phone number:">
-             </section>
-             <section class="form__item">
-                <button class="watching__submit btn btn--fill" type="submit">Submit</button>
-             </section>
-             <section class="form__item">
-                <label for="watcher-agree" class="form__label">I agree to the processing of personal data</label>
-                <input type="checkbox" class="form__input" id="watcher-agree">
-             </section>
+          <form class="videoControl__form form" action="">
+              <div class="form__wrapper">
+                 <section class="form__item">
+                    <label for="watcher-name" class="form__label">Name: </label>
+                    <input type="text" class="form__input" id="watcher-name" placeholder="What is your name:">
+                 </section>
+                 <section class="form__item">
+                    <label for="watcher-phone" class="form__label">Phone: </label>
+                    <input type="text" class="form__input" id="watcher-phone" placeholder="Your phone number:">
+                 </section>
+                 <section class="form__item">
+                    <button class="form__submit btn btn--fill" type="submit">Submit</button>
+                 </section>
+              </div>
+              <section class="form__item form__item--check">
+                <label for="watcher-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
+                <input type="checkbox" class="form__input form__input" id="watcher-agree">
+                <span class="form__check"></span>
+              </section>
           </form>
       </div>
   </section>
@@ -152,50 +157,58 @@
       <div class="container">
          <section class="repair__header heading">
            <h2 class="heading__title">Types Of Repair</h2>
-           <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
+           <div class="heading__wrapper">
+             <i class="fa fa-gavel heading__icon" aria-hidden="true"></i>
+           </div>
          </section>
-          <section class="project__types">
-              <article class="project__type projectCard">
-                  <img src="" alt="">
+          <section class="project">
+              <article class="projectCard">
+                <section class="projectCard__img"></section>
+                <section class="projectCard__desc">
                   <h3 class="projectCard__title">Redecorating</h3>
                   <ul class="projectCard__list">
-                      <li class="projectCard__item">Dismantling of old coatings</li>
-                      <li class="projectCard__item">Wallpapering</li>
-                      <li class="projectCard__item">Painting walls and ceilings</li>
-                      <li class="projectCard__item">Laying flooring</li>
-                      <li class="projectCard__item">Replacing plumbing</li>
-                      <li class="projectCard__item">Replacing sockets and switches</li>
-                      <li class="projectCard__item">Replacing doors</li>
+                    <li class="projectCard__item">Dismantling of old coatings</li>
+                    <li class="projectCard__item">Wallpapering</li>
+                    <li class="projectCard__item">Painting walls and ceilings</li>
+                    <li class="projectCard__item">Laying flooring</li>
+                    <li class="projectCard__item">Replacing plumbing</li>
+                    <li class="projectCard__item">Replacing sockets and switches</li>
+                    <li class="projectCard__item">Replacing doors</li>
                   </ul>
-                  <button class="projectCost btn btn--fill" type="button">from 900 rub / m<sup>2</sup></button>
+                  <button class="projectCard__btn btn btn--fill" type="button">from 900 rub / m2</button>
+                </section>
               </article>
-              <article class="project__type projectCard">
-                  <img src="" alt="">
+              <article class="projectCard">
+                <section class="projectCard__img"></section>
+                <section class="projectCard__desc">
                   <h3 class="projectCard__title">Overhaul</h3>
                   <ul class="projectCard__list">
-                       <li class="projectCard__item">Dismantling of old coatings</li>
-                       <li class="projectCard__item">Wallpapering</li>
-                       <li class="projectCard__item">Painting walls and ceilings</li>
-                       <li class="projectCard__item">Laying flooring</li>
-                       <li class="projectCard__item">Replacing plumbing</li>
-                       <li class="projectCard__item">Replacing sockets and switches</li>
-                       <li class="projectCard__item">Replacing doors</li>
+                    <li class="projectCard__item">Dismantling of old coatings</li>
+                    <li class="projectCard__item">Wallpapering</li>
+                    <li class="projectCard__item">Painting walls and ceilings</li>
+                    <li class="projectCard__item">Laying flooring</li>
+                    <li class="projectCard__item">Replacing plumbing</li>
+                    <li class="projectCard__item">Replacing sockets and switches</li>
+                    <li class="projectCard__item">Replacing doors</li>
                   </ul>
-                   <button class="projectCost btn btn--fill" type="button">from 1200 rub / m<sup>2</sup></button>
+                  <button class="projectCard__btn btn btn--fill" type="button">from 900 rub / m2</button>
+                </section>
               </article>
-              <article class="project__type projectCard">
-                  <img src="" alt="">
+              <article class="projectCard">
+                <section class="projectCard__img"></section>
+                <section class="projectCard__desc">
                   <h3 class="projectCard__title">Designer Repair</h3>
                   <ul class="projectCard__list">
-                        <li class="projectCard__item">Dismantling of old coatings</li>
-                        <li class="projectCard__item">Wallpapering</li>
-                        <li class="projectCard__item">Painting walls and ceilings</li>
-                        <li class="projectCard__item">Laying flooring</li>
-                        <li class="projectCard__item">Replacing plumbing</li>
-                        <li class="projectCard__item">Replacing sockets and switches</li>
-                        <li class="projectCard__item">Replacing doors</li>
+                    <li class="projectCard__item">Dismantling of old coatings</li>
+                    <li class="projectCard__item">Wallpapering</li>
+                    <li class="projectCard__item">Painting walls and ceilings</li>
+                    <li class="projectCard__item">Laying flooring</li>
+                    <li class="projectCard__item">Replacing plumbing</li>
+                    <li class="projectCard__item">Replacing sockets and switches</li>
+                    <li class="projectCard__item">Replacing doors</li>
                   </ul>
-                  <button class="projectCost btn btn--fill" type="button">from 4000 rub / m<sup>2</sup></button>
+                  <button class="projectCard__btn btn btn--fill" type="button">from 4000 rub / m2</button>
+                </section>
               </article>
           </section>
       </div>
@@ -226,9 +239,10 @@
                     <label for="measure-email" class="form__label">Email</label>
                     <input type="text" class="form__input" id="measure-email" placeholder="Your email: ">
                 </section>
-                <section class="form__item">
-                    <label for="measure-agree" class="form__label">I agree to the processing of personal data</label>
-                    <input type="checkbox" id="measure-agree" class="form__input">
+                <section class="form__item form__item--check">
+                  <label for="measure-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
+                  <input type="checkbox" class="form__input" id="measure-agree">
+                  <span class="form__check"></span>
                 </section>
                 <section class="form__item">
                     <button class="btn btn--fill" type="submit">Call the message</button>
@@ -277,7 +291,7 @@
        <p class="heading__subtitle">Design project not only helps to make the repair of your apartment more modern,<br>
                                     but also significantly reduces the cost of materials and reduces the time of repair work.</p>
      </section>
-     <section class="project__types">
+     <section class="project">
          <article class="project__type projectCard">
              <img src="" alt="">
              <h3 class="projectCard__title">Mini</h3>
