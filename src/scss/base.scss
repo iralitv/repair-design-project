@@ -1,7 +1,7 @@
 @import url(http://allfont.ru/allfont.css?fonts=futurademictt-normal);
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
 
-$color-bg-header: #131313;
+$color-bg-dark: #131313;
 $color-main: #E3B873;
 $color-text: #ffffff;
 
@@ -26,7 +26,6 @@ $margin-base: 10px;
 
 @mixin normal-text($font-size,  $text-color, $text-padding) {
   font-size: $font-size;
-  text-transform: capitalize;
   font-weight: normal;
   color: $text-color;
   padding: $text-padding 0;
@@ -78,10 +77,13 @@ a {
     @include d-flex(space-between);
     padding: 2.5*$padding-base 10*$padding-base 2.5*$padding-base 8*$padding-base;
   }
+  .completedProject & {
+    @include d-flex();
+  }
 }
 
 .header {
-  background: $color-bg-header;
+  background: $color-bg-dark;
 }
 
 .logo {
@@ -118,7 +120,7 @@ a {
 
 .pasteboard{
   height: 100vh;
-  background-color: $color-bg-header;
+  background-color: $color-bg-dark;
   .container {
     height: 100%;
     @include d-flex();
@@ -128,6 +130,7 @@ a {
     @include d-flex(center, center);
     & .share__title {
       position: relative;
+      text-decoration: none;
       @include heading-text($font-base-size, $color-main, $padding-base);
       -webkit-transform: rotate(90deg);
       -moz-transform: rotate(90deg);
@@ -166,6 +169,158 @@ a {
     padding: 2*$padding-base 0;
     &:first-child {
       margin-right: $margin-base;
+    }
+  }
+}
+
+.completedProject {
+  background: $color-bg-dark;
+  padding-top: 10*$padding-base;
+  &__desc {
+    flex: 3;
+    padding: 0 5*$padding-base 0 10*$padding-base;
+  }
+  &__photo {
+    flex: 5;
+  }
+}
+
+.projectInfo {
+  @include d-flex();
+  flex-direction: column;
+  &__title {
+    position: relative;
+    max-width: 250px;
+    @include heading-text($font-base-size*2, $color-main, 0);
+    font-weight: normal;
+    font-family: Yeseva One;
+    padding-top: 6*$padding-base;
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      display: block;
+      height: 2px;
+      width: 90px;
+      background-color: $color-main;
+    }
+  }
+  &__desc {
+    @include normal-text(1.25*$font-base-size, $color-text, 3*$padding-base 0 4*$padding-base);
+    line-height: 1.75;
+    font-family: FuturaBookC, sans-serif;
+  }
+  &__general {
+    width: 80%;
+  }
+}
+
+.houseDetails {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20% 10%;
+  padding-bottom: 4*$padding-base;
+  &__item {
+    @include d-flex();
+    flex-direction: column;
+  }
+  &__title {
+    @include heading-text(1.3*$font-base-size, $color-main, $padding-base 0);
+    font-family: Yeseva One;
+    font-weight: normal;
+  }
+  &__info {
+    @include normal-text($font-base-size, $color-text, 0);
+    line-height: 1.3;
+    padding-right: 3*$padding-base;
+    font-family: FuturaBookC, sans-serif;
+  }
+}
+
+.projectCarousel {
+  @include d-flex();
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  &__titles {
+    @include d-flex();
+  }
+  &__title {
+    @include heading-text($font-base-size, $color-main, $padding-base 2*$padding-base);
+    font-family: Yeseva One;
+    font-weight: normal;
+    &--active,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__gallery {
+
+  }
+}
+
+.gallery {
+  @include d-flex();
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+
+  &__item {
+    width: 300px;
+    height: 450px;
+  }
+  &__btn {
+    position: absolute;
+    @include d-flex(center, center);
+    width: 55px;
+    height: 55px;
+    border: 0;
+    border-radius: 50%;
+    background: $color-main;
+    & .fa {
+      color: $color-text;
+      font-size: 1.5*$font-base-size;
+    }
+    &--right {
+      top: 45%;
+      right: 10px;
+    }
+    &--left {
+      display: none;
+    }
+    &:hover {
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(231,166,26,1);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(231,166,26,1);
+      box-shadow: 0px 0px 30px 0px rgba(231,166,26,1);
+    }
+  }
+}
+
+.controls {
+  @include d-flex();
+  &__arrow {
+    font-size: 1.8*$font-base-size;
+    border: 0;
+    color: $color-text;
+    background: transparent;
+    &:hover {
+      color: $color-main;
+    }
+  }
+  &__dots {
+    @include d-flex(center, center);
+  }
+  &__dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $color-text;
+    margin: $padding-base;
+    &:hover {
+      color: $color-main;
     }
   }
 }
