@@ -8,6 +8,7 @@ $color-main: #E3B873;
 $color-text: #ffffff;
 $color-text-dark: #363636;
 $color-grey: rgba(54, 54, 54, 0.5);
+$color-light-grey: rgba(255, 255, 255, 0.5);
 
 $font-base-size: 14px;
 $font-base-family: 'FuturaDemiCTT Normal', arial;
@@ -91,6 +92,9 @@ a {
   .repair & {
     @include d-flex(center, center);
     flex-direction: column;
+  }
+  .measure & {
+    @include  d-flex(space-between, center);
   }
 }
 
@@ -407,6 +411,14 @@ a {
   &__wrapper {
     @include d-flex(center, center);
   }
+  &__legend {
+    @include normal-text(1.5*$font-base-size, $color-text, 2*$padding-base);
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  &__fieldset {
+    border: 0;
+  }
   &__item {
     @include d-flex(center, normal);
     flex-direction: column;
@@ -421,6 +433,7 @@ a {
     border: 0;
     border-bottom: 1px solid $color-grey;
     outline: none;
+    background: transparent;
     &:focus {
       border-bottom: 1px solid $color-main;
     }
@@ -540,5 +553,119 @@ a {
       font-family: "Yeseva One";
       font-weight: normal;
     }
+  }
+}
+
+.measure {
+  position: relative;
+  &__figure {
+    position: relative;
+    @include d-flex(normal, center);
+    width: 60%;
+    height: 800px;
+  }
+  &__border {
+    width: 70%;
+    height: 75%;
+    position: relative;
+    //border: 3px solid $color-main;
+    border-radius: 50%;
+    background-clip: padding-box;
+    border: solid 3px transparent;
+    background: $color-bg-light;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -7px;
+      border-radius: inherit;
+      background: linear-gradient(to right, transparent, orange);
+    }
+  }
+  &__stages {
+    height: 75%;
+    position: absolute;
+    left: 65%;
+    top: 20%;
+  }
+  &__stage {
+    height: 25%;
+    position: relative;
+    @include normal-text(1.125*$font-base-size, $color-text-dark, 0);
+    font-family: "FuturaMediumC", sans-serif;
+    list-style-type: none;
+    &:nth-child(2),
+    &:nth-child(3){
+      left: 30%;
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      left: -80px;
+      top: -20px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 10px solid $color-text;
+      background-color: $color-main;
+    }
+  }
+  &__number {
+    position: absolute;
+    top: 0;
+    left: -60px;
+    @include normal-text(1.25*$font-base-size,$color-text, 0);
+    font-family: "Yeseva One";
+  }
+  &__form {
+    background: $color-bg-dark;
+    padding: 3*$padding-base 5*$padding-base;
+    margin: 0 auto;
+    .form__label {
+      color: $color-light-grey;
+    }
+    .form__input::-moz-placeholder {
+      color: $color-text;
+    }
+    .form__input::-webkit-input-placeholder {
+      color: $color-text;
+    }
+    .form__input::placeholder,
+    .form__label--check {
+      color: $color-text;
+    }
+    .form__item--btn {
+      @include d-flex(flex-end, flex-end);
+      padding-top: $padding-base;
+      .btn {
+        padding: 2*$padding-base 3*$padding-base;
+      }
+    }
+  }
+  &__bonus {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+  }
+}
+
+.bonus {
+  @include d-flex(center, center);
+  &__icon {
+    @include d-flex(center, center);
+    width: 72px;
+    height: 72px;
+    background: $color-main;
+    border-radius: 50%;
+    .fa {
+      @include normal-text(3*$font-base-size, $color-text, 0);
+    }
+  }
+  &__text {
+    @include normal-text(1.25*$font-base-size, $color-main, 0 2*$padding-base);
+    font-family: "FuturaDemiC", sans-serif;
+    line-height: 1.25;
   }
 }

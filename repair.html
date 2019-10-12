@@ -213,19 +213,24 @@
           </section>
       </div>
   </section>
+
   <section class="measure">
     <div class="container">
-        <ul class="measure__stages stageList">
-           <li class="stageList__stage">Our specialist will arrive for measurements per day
-                                        contact, or appoint a date convenient for you</li>
-           <li class="stageList__stage">Free metering</li>
-           <li class="stageList__stage">Free consultation</li>
-           <li class="stageList__stage">Get a cost estimate and
-                                        the timing of your future repairs</li>
+      <section class="measure__figure">
+        <div class="measure__border">
+        </div>
+        <ul class="measure__stages ">
+          <li class="measure__stage"><span class="measure__number">01</span>Our specialist will arrive for measurements per day
+            contact, or appoint a date convenient for you</li>
+          <li class="measure__stage"><span class="measure__number">02</span>Free metering</li>
+          <li class="measure__stage"><span class="measure__number">03</span>Free consultation</li>
+          <li class="measure__stage"><span class="measure__number">04</span>Get a cost estimate and
+            the timing of your future repairs</li>
         </ul>
-        <form class="measureForm form" action="" method="post">
-            <fieldset>
-                <legend>Leave a request for free
+      </section>
+      <form class="measure__form form" action="" method="post">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Leave a request for free
                         departure of the measurer</legend>
                 <section class="form__item">
                     <label for="measure-name" class="form__label">Name</label>
@@ -244,14 +249,14 @@
                   <input type="checkbox" class="form__input" id="measure-agree">
                   <span class="form__check"></span>
                 </section>
-                <section class="form__item">
-                    <button class="btn btn--fill" type="submit">Call the message</button>
+                <section class="form__item form__item--btn">
+                    <button class="form__submit btn btn--fill" type="submit">Call the measurer</button>
                 </section>
             </fieldset>
-        </form>
-        <section class="measureBonus">
-            <div class="measureBonus__icon"><i class="fa fa-money" aria-hidden="true"></i></div>
-            <p class="measureBonus__text">Help save 10 - 20% of the cost of materials</p>
+      </form>
+        <section class="measure__bonus bonus">
+            <div class="bonus__icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+            <p class="bonus__text">Help save 10 - 20% of the<br> cost of materials</p>
         </section>
     </div>
   </section>
