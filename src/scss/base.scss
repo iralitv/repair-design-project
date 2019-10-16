@@ -392,13 +392,6 @@ a {
   }
 }
 
-.main-divider {
-  width: 55px;
-  height: 2px;
-  border: 0;
-  background-color: $color-main;
-}
-
 .videoControl {
   background: -webkit-linear-gradient($color-bg-dark 40%, $color-bg-light 40%, $color-bg-light 100%);
   background:    -moz-linear-gradient($color-bg-dark 40%, $color-bg-light 40%, $color-bg-light 100%);
@@ -541,7 +534,7 @@ a {
     background-color: $color-main;
     @include d-flex(center, center);
   }
-  &__icon {
+  &__icon.fa {
     @include normal-text(2*$font-base-size, $color-text, 0);
   }
   &__subtitle {
@@ -861,9 +854,9 @@ a {
 }
 
 .team {
-  background: -webkit-linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
-  background:    -moz-linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
-  background: linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
+  background: -webkit-linear-gradient($color-bg-dark 40%, $color-bg-light 40%, $color-bg-light 100%);
+  background:    -moz-linear-gradient($color-bg-dark 40%, $color-bg-light 40%, $color-bg-light 100%);
+  background: linear-gradient($color-bg-dark 40%, $color-bg-light 40%, $color-bg-light 100%);
   &__header .heading__subtitle {
     color: $color-text;
   }
@@ -874,7 +867,7 @@ a {
     padding-bottom: 15*$padding-base;
   }
   .projectCard {
-    margin: 0 45px;
+    margin: 0 50px;
     &__title,
     &__subtitle {
       text-align: center;
@@ -882,11 +875,9 @@ a {
     &__img {
       height: 370px;
     }
-    &__desc {
-      max-width: 70%
-    }
     &__btn {
       width: 100%;
+      font-size: $font-base-size;
     }
   }
 }
@@ -900,4 +891,12 @@ a {
   font-family: FuturaBookC;
   line-height: 1.75;
   text-align: center;
+}
+
+.main-divider {
+  width: 55px;
+  height: 2px;
+  border: 0;
+  background-color: $color-main;
+  margin: 2*$padding-base 0;
 }
