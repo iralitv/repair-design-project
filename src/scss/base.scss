@@ -101,6 +101,9 @@ a {
     background: red;
     max-height: 885px;
   }
+  .goal & {
+    @include d-flex(space-around, flex-start);
+  }
 }
 
 .header {
@@ -209,6 +212,10 @@ a {
 .projectInfo {
   @include d-flex();
   flex-direction: column;
+  &__suptitle {
+    @include normal-text($font-base-size, $color-text, 0);
+    text-transform: uppercase;
+  }
   &__title {
     position: relative;
     max-width: 250px;
@@ -220,7 +227,7 @@ a {
       content: " ";
       position: absolute;
       bottom: 15px;
-      right: 0;
+      right: -15px;
       display: block;
       height: 2px;
       width: 90px;
@@ -379,7 +386,7 @@ a {
     }
   }
   &__subtitle {
-    @include normal-text(1.25*$font-base-size, $color-text-dark, $padding-base);
+    @include normal-text(1.25*$font-base-size, $color-text-dark, 2*$padding-base 0 3*$padding-base);
     font-family: "FuturaBookC", sans-serif;
     text-align: center;
   }
@@ -401,13 +408,6 @@ a {
   }
   &__video {
     padding-bottom: 6*$padding-base;
-  }
-  &__desc {
-    @include normal-text(1.375*$font-base-size, $color-text-dark, 3*$padding-base 0 9*$padding-base);
-    font-family: FuturaBookC;
-    line-height: 1.75;
-    max-width: 680px;
-    text-align: center;
   }
   &__form {
     padding-bottom: 13*$padding-base;
@@ -524,49 +524,68 @@ a {
   margin: 0 auto;
   @include d-flex(space-around, normal);
   padding-bottom: 30*$padding-base;
-  .projectCard {
-    @include d-flex();
-    flex-direction: column;
-    position: relative;
-    &__img {
-      min-width: 390px;
-      height: 420px;
-      background: $color-text-dark;
-    }
-    &__desc {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 300px;
-      margin: auto;
-      max-width: 60%;
-      background-color: $color-bg-white;
-      padding: 2.5*$padding-base 3.5*$padding-base 5*$padding-base;
-      -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-      -moz-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-    }
-    &__title {
-      @include heading-text(1.25*$font-base-size, $color-text-dark, $padding-base 0);
-      font-family: "Yeseva One";
-      text-transform: capitalize;
-      font-weight: normal;
-    }
-    &__list {
-      @include normal-text($font-base-size, $color-grey, 0);
-      font-family: "FuturaBookC";
-      line-height: 1.75;
-      margin-left: 1.5*$padding-base;
-    }
-    &__btn {
-      position: absolute;
-      bottom: -25px;
-      left: 0;
-      @include heading-text(1.25*$font-base-size, $color-text, 1.5*$padding-base 2*$padding-base);
-      border-radius: 0;
-      font-family: "Yeseva One";
-      font-weight: normal;
-    }
+}
+
+.projectCard {
+  @include d-flex();
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  margin: 0 2*$padding-base;
+  &__skill {
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 70px;
+    height: 70px;
+    background-color: $color-main;
+    @include d-flex(center, center);
+  }
+  &__icon {
+    @include normal-text(2*$font-base-size, $color-text, 0);
+  }
+  &__subtitle {
+    @include normal-text(1.25*$font-base-size, $color-grey, 0);
+    font-family: "FuturaBookC";
+  }
+  &__img {
+    width: 100%;
+    height: 420px;
+    background: $color-text-dark;
+  }
+  &__desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 300px;
+    margin: auto;
+    max-width: 60%;
+    background-color: $color-bg-white;
+    padding: 2.5*$padding-base 3.5*$padding-base 5*$padding-base;
+    -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  }
+  &__title {
+    @include heading-text(1.25*$font-base-size, $color-text-dark, $padding-base 0);
+    font-family: "Yeseva One";
+    text-transform: capitalize;
+    font-weight: normal;
+  }
+  &__list {
+    @include normal-text($font-base-size, $color-grey, 0);
+    font-family: "FuturaBookC";
+    line-height: 1.75;
+    margin-left: 1.5*$padding-base;
+  }
+  &__btn {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    @include heading-text(1.25*$font-base-size, $color-text, 1.5*$padding-base 2*$padding-base);
+    border-radius: 0;
+    font-family: "Yeseva One";
+    font-weight: normal;
   }
 }
 
@@ -764,4 +783,121 @@ a {
   &__header .heading__title {
     color: $color-text-dark;
   }
+}
+
+.goal {
+  background: $color-bg-dark;
+  &__carousel {
+    flex: 1;
+    padding: 0 5*$padding-base 10*$padding-base 10*$padding-base;
+    .projectInfo__title {
+      padding-top: 2*$padding-base;
+    }
+  }
+  &__stages {
+    flex: 3;
+  }
+}
+
+.step {
+  @include d-flex();
+  flex-direction: column;
+  &__number {
+    @include heading-text(1.25*$font-base-size, $color-text, 0 0 2*$padding-base);
+    font-family: "Yeseva One";
+  }
+  &__title {
+    @include heading-text($font-base-size, $color-main, 0 0 1.5*$padding-base);
+    font-family: "Yeseva One";
+    max-width: 230px;
+  }
+  &__desc {
+    @include normal-text($font-base-size, $color-text, 0);
+    font-family: "FuturaBookC";
+  }
+}
+
+.stage {
+  @include d-flex();
+  flex-direction: column;
+  padding: 6*$padding-base 2*$padding-base;
+  &__wrapper {
+    flex: 1;
+  }
+  &__list {
+    @include d-flex();
+    flex-wrap: wrap;
+  }
+  &__link {
+    @include normal-text($font-base-size, $color-light-grey, 0 0 3*$padding-base);
+    display: block;
+    max-width: 125px;
+    text-decoration: none;
+    &--active,
+    &:hover {
+      color: $color-text;
+    }
+  }
+  &__number {
+    font-family: "Yeseva One";
+    border-bottom: 1px solid $color-main;
+    padding-bottom: 2px;
+  }
+  &__title {
+    font-size: $font-base-size;
+    font-family: "FuturaBookC";
+    font-weight: 400;
+    padding-top: 1.5*$padding-base;
+  }
+  &__item {
+    width: 33%;
+    list-style-type: none;
+  }
+  &__img {
+    flex: 2;
+    min-height: 370px;
+    background-color: red;
+  }
+}
+
+.team {
+  background: -webkit-linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
+  background:    -moz-linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
+  background: linear-gradient($color-bg-dark 50%, $color-bg-light 50%, $color-bg-light 100%);
+  &__header .heading__subtitle {
+    color: $color-text;
+  }
+  &__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    @include d-flex(space-around, normal);
+    padding-bottom: 15*$padding-base;
+  }
+  .projectCard {
+    margin: 0 45px;
+    &__title,
+    &__subtitle {
+      text-align: center;
+    }
+    &__img {
+      height: 370px;
+    }
+    &__desc {
+      max-width: 70%
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+.divide__desc {
+  @include d-flex(center, center);
+  flex-direction: column;
+  max-width: 680px;
+  margin: 0 auto;
+  @include normal-text(1.375*$font-base-size, $color-text-dark, 3*$padding-base 0 9*$padding-base);
+  font-family: FuturaBookC;
+  line-height: 1.75;
+  text-align: center;
 }
