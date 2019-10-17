@@ -55,9 +55,9 @@ a {
   cursor: pointer;
   &:hover{
     box-shadow:
-    1px 1px $color-main,
-    2px 2px $color-main,
-    3px 3px $color-main;
+        1px 1px $color-main,
+        2px 2px $color-main,
+        3px 3px $color-main;
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
   }
@@ -66,9 +66,9 @@ a {
     border: 1px solid $color-main;
     &:hover {
       box-shadow:
-      1px 1px $color-text,
-      2px 2px $color-text,
-      3px 3px $color-text;
+          1px 1px $color-text,
+          2px 2px $color-text,
+          3px 3px $color-text;
       -webkit-transform: translateX(-3px);
       transform: translateX(-3px);
     }
