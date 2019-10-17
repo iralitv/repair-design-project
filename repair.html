@@ -138,7 +138,7 @@
                  </section>
                  <section class="form__item">
                     <label for="watcher-phone" class="form__label">Phone: </label>
-                    <input type="text" class="form__input" id="watcher-phone" placeholder="Your phone number:">
+                    <input type="tel" class="form__input" id="watcher-phone" placeholder="Your phone number:">
                  </section>
                  <section class="form__item">
                     <button class="form__submit btn btn--fill" type="submit">Submit</button>
@@ -238,11 +238,11 @@
                 </section>
                 <section class="form__item">
                     <label for="measure-phone" class="form__label">Phone</label>
-                    <input type="text" class="form__input" id="measure-phone" placeholder="Your phone number: ">
+                    <input type="tel" class="form__input" id="measure-phone" placeholder="Your phone number: ">
                 </section>
                 <section class="form__item">
                     <label for="measure-email" class="form__label">Email</label>
-                    <input type="text" class="form__input" id="measure-email" placeholder="Your email: ">
+                    <input type="email" class="form__input" id="measure-email" placeholder="Your email: ">
                 </section>
                 <section class="form__item form__item--check">
                   <label for="measure-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
@@ -485,7 +485,168 @@
     </div>
   </section>
 
+  <section class="clients">
+    <div class="container">
+      <section class="clients__header heading">
+        <h2 class="heading__title">Our clients</h2>
+        <div class="heading__wrapper">
+          <i class="fa fa-users heading__icon" aria-hidden="true"></i>
+        </div>
+        <p class="heading__subtitle">80% of our customers recommend us to their<br>
+          friends and family.</p>
+      </section>
+      <section class="clients__wrapper">
+        <article class="client">
+          <article class="client__profile">
+            <img src="" alt="" width="75px" height="75px" class="client__img">
+            <h3 class="client__name">Kiriev Egor <br>Leonidovich</h3>
+          </article>
+          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
+            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
+            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
+            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
+            Quality satisfied. Prices democratic. I recommend these masters.</p>
+          <section class="client__order">
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">40 M2</p>
+            </section>
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">48 days</p>
+            </section>
+          </section>
+        </article>
+        <article class="client">
+          <article class="client__profile">
+            <img src="" alt="" width="75px" height="75px" class="client__img">
+            <h3 class="client__name">Afanasyev Sergey <br>Alexandrovich</h3>
+          </article>
+          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
+            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
+            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
+            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
+            Quality satisfied. Prices democratic. I recommend these masters.</p>
+          <section class="client__order">
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">40 M2</p>
+            </section>
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">48 days</p>
+            </section>
+          </section>
+        </article>
+        <article class="client">
+          <article class="client__profile">
+            <img src="" alt="" width="75px" height="75px" class="client__img">
+            <h3 class="client__name">Fedosova Maria <br>Konstantinovna</h3>
+          </article>
+          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
+            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
+            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
+            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
+            Quality satisfied. Prices democratic. I recommend these masters.</p>
+          <section class="client__order">
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">40 M2</p>
+            </section>
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">48 days</p>
+            </section>
+          </section>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section class="question">
+    <div class="container">
+      <form class="question__form form" action="" method="post">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">HAVE ANY QUESTIONS?</legend>
+          <div class="question__wrapper">
+            <section class="form__item">
+              <label for="questions-name" class="form__label">Name</label>
+              <input type="text" class="form__input" id="questions-name" placeholder="What is your name:">
+            </section>
+            <section class="form__item">
+              <label for="questions-phone" class="form__label">Phone</label>
+              <input type="tel" class="form__input" id="questions-phone" placeholder="Your phone number: ">
+            </section>
+          </div>
+          <section class="form__item">
+            <label for="questions-quest" class="form__label">Question</label>
+            <input type="text" class="form__input" id="questions-quest" placeholder="I want to know: ">
+          </section>
+          <section class="form__item form__item--check">
+            <label for="questions-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
+            <input type="checkbox" class="form__input" id="questions-agree">
+            <span class="form__check"></span>
+          </section>
+          <section class="form__item form__item--btn">
+            <button class="form__submit btn btn--fill" type="submit">Submit</button>
+          </section>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <section class="contact__info">
+        <p class="contact__address">Rostov-on-Don, Nansen St., 239 Shopping Center<br>
+          Decorum Tel +7 (928) 768 32 29</p>
+        <section class="contact__share">
+          <div class="contact__share--wrapper">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </div>
+          <div class="contact__share--wrapper">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </section>
+      </section>
+      <section class="contact__map"></section>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="container">
+    <section class="logo header__logo">
+      <p class="logo__title">IC "Repair Design Project"</p>
+    </section>
+    <nav class="menu header__menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link menu__link--active">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Projects</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Measurement</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Team</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Reviews</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="phone header__phone">
+      <a href="tel:+79287683239" class="phone__number">+7 (928) 768-32-39</a>
+      <button class="request__button btn btn--fill" type="button">Request a call</button>
+    </section>
+  </div>
+</footer>
 
 <script type="text/javascript" src="dist/bundle.js"></script>
 </body>

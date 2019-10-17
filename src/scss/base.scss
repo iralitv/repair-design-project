@@ -8,7 +8,8 @@ $color-main: #E3B873;
 $color-text: #ffffff;
 $color-text-dark: #363636;
 $color-grey: rgba(54, 54, 54, 0.5);
-$color-light-grey: rgba(255, 255, 255, 0.5);
+$color-light-grey: #959595;
+$color-grey-2: #959595;
 
 $font-base-size: 14px;
 $font-base-family: 'FuturaDemiCTT Normal', arial;
@@ -79,8 +80,8 @@ a {
   margin: 0 auto;
   .header & {
     max-width: 1440px;
-    @include d-flex(space-between);
-    padding: 2.5*$padding-base 10*$padding-base 2.5*$padding-base 8*$padding-base;
+    @include d-flex(space-around);
+    padding: 2.5*$padding-base 0;
   }
   .completedProject & {
     @include d-flex();
@@ -103,6 +104,14 @@ a {
   }
   .goal & {
     @include d-flex(space-around, flex-start);
+  }
+  .contact & {
+    @include d-flex(center, normal);
+  }
+  .footer & {
+    max-width: 1440px;
+    @include d-flex(space-around);
+    padding: 2.5*$padding-base 0;
   }
 }
 
@@ -418,6 +427,7 @@ a {
     @include normal-text(1.5*$font-base-size, $color-text, 2*$padding-base);
     max-width: 280px;
     margin: 0 auto;
+    text-align: center;
   }
   &__fieldset {
     border: 0;
@@ -899,4 +909,153 @@ a {
   border: 0;
   background-color: $color-main;
   margin: 2*$padding-base 0;
+}
+
+.clients {
+  background: $color-bg-light;
+  &__header .heading__title {
+    color: $color-text-dark;
+  }
+  &__wrapper {
+    @include d-flex();
+  }
+}
+
+.client {
+  position: relative;
+  flex: 1;
+  padding: 3*$padding-base;
+  margin: 3*$padding-base;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  &__profile {
+    @include d-flex(normal, center);
+  }
+  &__img {
+    border-radius: 50%;
+  }
+  &__name {
+    @include heading-text(1.25*$font-base-size, $color-text-dark, 0 2*$padding-base);
+    font-family: "Yeseva One";
+    text-transform: capitalize;
+  }
+  &__comment {
+    @include normal-text($font-base-size, $color-light-grey, 0 0 2*$padding-base);
+    line-height: 1.8;
+    font-family: 'FuturaBookC';
+  }
+  &__order {
+    width: 70%;
+    position: absolute;
+    bottom: -20;
+    left: 0;
+    @include d-flex(space-around);
+  }
+  &__size {
+    flex: 1;
+    background: $color-main;
+    border-left: 1px solid $color-text;
+  }
+}
+
+.size {
+  @include d-flex(center, center);
+  &__icon.fa {
+    @include heading-text(2*$font-base-size, $color-text, $padding-base);
+  }
+  &__text {
+    @include heading-text(1.125*$font-base-size, $color-text, 0);
+    font-family: "Yeseva One";
+  }
+}
+
+.question {
+  background: -webkit-linear-gradient($color-bg-light 50%, $color-bg-dark 50%, $color-bg-dark 100%);
+  background:    -moz-linear-gradient($color-bg-light 50%, $color-bg-dark 50%, $color-bg-dark 100%);
+  background: linear-gradient($color-bg-light 50%, $color-bg-dark 50%, $color-bg-dark 100%);
+  padding: 5*$padding-base 0;
+  &__wrapper {
+    @include d-flex();
+  }
+  &__form {
+    -webkit-box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.03);
+    -moz-box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.03);
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.03);
+    width: 60%;
+    margin: 0 auto;
+    padding: 3*$padding-base;
+    background: $color-bg-dark;
+    .form__item {
+      &--check{
+        max-width: 330px;
+        margin: 2*$padding-base auto;
+      }
+      &--btn {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+    }
+    .form__legend {
+      font-family: "Yeseva One";
+    }
+    .form__label {
+      color: $color-light-grey;
+      &--check {
+        color: $color-text;
+      }
+    }
+    .form__input {
+      color: $color-text;
+      &:focus {
+        border-bottom: 1px solid $color-main;
+      }
+      &::placeholder {
+        color: $color-text;
+      }
+      &::-moz-placeholder {
+        color: $color-text;
+      }
+      &::-webkit-input-placeholder {
+        color: $color-text;
+      }
+    }
+  }
+}
+
+.contact {
+  background: $color-bg-dark;
+  padding: 5*$padding-base 0;
+  &__info {
+    @include d-flex(normal, center);
+    flex-direction: column;
+  }
+  &__address {
+    @include heading-text(1.5*$font-base-size, $color-main, 2*$padding-base);
+    font-family: "Yeseva One";
+    text-align: center;
+  }
+  &__share {
+    @include d-flex();
+    &--wrapper {
+      @include d-flex(center, center);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: $color-main;
+      margin: $padding-base;
+    }
+    .fa {
+      color: $color-text;
+    }
+  }
+  &__map {
+    max-width: 925px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.footer {
+  background-color: $color-bg-dark;
 }
