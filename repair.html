@@ -104,8 +104,8 @@
         </section>
         <section class="projectCarousel__gallery gallery">
           <button class="gallery__btn gallery__btn--left"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-            <img src="" alt="" class="gallery__item">
-            <img src="" alt="" class="gallery__item">
+            <img src="src/images/carousel_1.png" alt="" class="gallery__item">
+            <img src="src/images/carousel_1.png" alt="" class="gallery__item">
           <button class="gallery__btn gallery__btn--right"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
         </section>
       </article>
@@ -120,9 +120,17 @@
               <i class="fa fa-video-camera heading__icon" aria-hidden="true"></i>
             </div>
           </section>
-          <video class="videoControl__video" src="videofile.ogg" width="820" height="430" autoplay poster="posterimage.jpg">
-              Sorry, your browser doesn't support embedded videos
+        <div class="videoControl__wrapper">
+          <video class="videoControl__video" width="820" height="430" poster="src/images/video_poster.png">
+            Sorry, your browser doesn't support embedded videos
+            <source src="http://demo.inwebson.com/html5-video/iceage4.mp4" type="video/mp4" />
+            <source src="http://demo.inwebson.com/html5-video/iceage4.ogg" type="video/ogg" />
+            <source src="http://demo.inwebson.com/html5-video/iceage4.webm" type="video/webm" />
           </video>
+          <div class="videoControl__controls">
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </div>
+        </div>
           <section class="divide__desc">
             <hr class="main-divider">
             <p>At each facility, a camera is installed that broadcasts the progress
@@ -163,7 +171,7 @@
          </section>
           <section class="project">
               <article class="projectCard">
-                <section class="projectCard__img"></section>
+                <img src="src/images/repair_type_1.png" alt=" " class="projectCard__img">
                 <section class="projectCard__desc">
                   <h3 class="projectCard__title">Redecorating</h3>
                   <ul class="projectCard__list">
@@ -179,7 +187,7 @@
                 </section>
               </article>
               <article class="projectCard">
-                <section class="projectCard__img"></section>
+                <img src="src/images/repair_type_2.png" alt=" " class="projectCard__img">
                 <section class="projectCard__desc">
                   <h3 class="projectCard__title">Overhaul</h3>
                   <ul class="projectCard__list">
@@ -195,7 +203,7 @@
                 </section>
               </article>
               <article class="projectCard">
-                <section class="projectCard__img"></section>
+                <img src="src/images/repair_type_3.png" alt=" " class="projectCard__img">
                 <section class="projectCard__desc">
                   <h3 class="projectCard__title">Designer Repair</h3>
                   <ul class="projectCard__list">
@@ -303,7 +311,7 @@
       </section>
       <section class="project">
         <article class="projectCard">
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/design_1.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Mini</h3>
             <ul class="projectCard__list">
@@ -316,7 +324,7 @@
           </section>
         </article>
         <article class="projectCard">
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/design_2.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Standart</h3>
             <ul class="projectCard__list">
@@ -332,7 +340,7 @@
           </section>
         </article>
         <article class="projectCard">
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/design_3.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Full</h3>
             <ul class="projectCard__list">
@@ -425,7 +433,7 @@
               </li>
             </ul>
           </section>
-          <section class="stage__img"><img src="" alt=""></section>
+          <img src="src/images/goal.png" alt="" class="stage__img">
         </article>
     </div>
   </section>
@@ -445,7 +453,7 @@
           <section class="projectCard__skill">
             <i class="fa fa-lightbulb-o projectCard__icon" aria-hidden="true"></i>
           </section>
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/team_1.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Dmitry Tulyakov</h3>
             <p class="projectCard__subtitle">Project manager</p>
@@ -456,7 +464,7 @@
           <section class="projectCard__skill">
             <i class="fa fa-paint-brush projectCard__icon" aria-hidden="true"></i>
           </section>
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/team_2.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Larisa Kotlyarova</h3>
             <p class="projectCard__subtitle">Designer</p>
@@ -467,7 +475,7 @@
           <section class="projectCard__skill">
             <i class="fa fa-briefcase projectCard__icon" aria-hidden="true"></i>
           </section>
-          <section class="projectCard__img"><img src="" alt=""></section>
+          <img src="src/images/team_3.png" alt="" class="projectCard__img">
           <section class="projectCard__desc">
             <h3 class="projectCard__title">Alexey Efimov</h3>
             <p class="projectCard__subtitle">Foreman</p>
@@ -498,49 +506,7 @@
       <section class="clients__wrapper">
         <article class="client">
           <article class="client__profile">
-            <img src="" alt="" width="75px" height="75px" class="client__img">
-            <h3 class="client__name">Kiriev Egor <br>Leonidovich</h3>
-          </article>
-          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
-            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
-            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
-            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
-            Quality satisfied. Prices democratic. I recommend these masters.</p>
-          <section class="client__order">
-            <section class="client__size size">
-              <i class="fa fa-users size__icon" aria-hidden="true"></i>
-              <p class="size__text">40 M2</p>
-            </section>
-            <section class="client__size size">
-              <i class="fa fa-users size__icon" aria-hidden="true"></i>
-              <p class="size__text">48 days</p>
-            </section>
-          </section>
-        </article>
-        <article class="client">
-          <article class="client__profile">
-            <img src="" alt="" width="75px" height="75px" class="client__img">
-            <h3 class="client__name">Afanasyev Sergey <br>Alexandrovich</h3>
-          </article>
-          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
-            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
-            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
-            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
-            Quality satisfied. Prices democratic. I recommend these masters.</p>
-          <section class="client__order">
-            <section class="client__size size">
-              <i class="fa fa-users size__icon" aria-hidden="true"></i>
-              <p class="size__text">40 M2</p>
-            </section>
-            <section class="client__size size">
-              <i class="fa fa-users size__icon" aria-hidden="true"></i>
-              <p class="size__text">48 days</p>
-            </section>
-          </section>
-        </article>
-        <article class="client">
-          <article class="client__profile">
-            <img src="" alt="" width="75px" height="75px" class="client__img">
+            <img src="src/images/client_1.png" alt="" width="75px" height="75px" class="client__img">
             <h3 class="client__name">Fedosova Maria <br>Konstantinovna</h3>
           </article>
           <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
@@ -554,7 +520,49 @@
               <p class="size__text">40 M2</p>
             </section>
             <section class="client__size size">
+              <i class="fa fa-list-alt size__icon" aria-hidden="true"></i>
+              <p class="size__text">48 days</p>
+            </section>
+          </section>
+        </article>
+        <article class="client">
+          <article class="client__profile">
+            <img src="src/images/client_2.png" alt="" width="75px" height="75px" class="client__img">
+            <h3 class="client__name">Afanasyev Sergey <br>Alexandrovich</h3>
+          </article>
+          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
+            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
+            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
+            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
+            Quality satisfied. Prices democratic. I recommend these masters.</p>
+          <section class="client__order">
+            <section class="client__size size">
               <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">40 M2</p>
+            </section>
+            <section class="client__size size">
+              <i class="fa fa-list-alt size__icon" aria-hidden="true"></i>
+              <p class="size__text">48 days</p>
+            </section>
+          </section>
+        </article>
+        <article class="client">
+          <article class="client__profile">
+            <img src="src/images/client_3.png" alt="" width="75px" height="75px" class="client__img">
+            <h3 class="client__name">Kiriev Egor <br>Leonidovich</h3>
+          </article>
+          <p class="client__comment">I want to thank the guys for their work. We put your shower part in repair.
+            I am very grateful that i referred to the repair as to my own. Great thanks i express the project
+            to georgia for its professionalism and approach. The repair process was turned out in terms, faster
+            than anticipated. Team mobile and professional. Works performed qualitatively without comments.
+            Quality satisfied. Prices democratic. I recommend these masters.</p>
+          <section class="client__order">
+            <section class="client__size size">
+              <i class="fa fa-users size__icon" aria-hidden="true"></i>
+              <p class="size__text">40 M2</p>
+            </section>
+            <section class="client__size size">
+              <i class="fa fa-list-alt size__icon" aria-hidden="true"></i>
               <p class="size__text">48 days</p>
             </section>
           </section>
@@ -609,7 +617,7 @@
           </div>
         </section>
       </section>
-      <section class="contact__map"></section>
+      <img src="src/images/map.png" alt="" class="contact__map">
     </div>
   </section>
 </main>
