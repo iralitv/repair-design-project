@@ -38,7 +38,7 @@
     </nav>
     <section class="phone header__phone">
       <a href="tel:+79287683239" class="phone__number">+7 (928) 768-32-39</a>
-      <button class="request__button btn btn--fill" type="button">Request a call</button>
+      <button class="phone__button btn btn--fill" type="button">Request a call</button>
     </section>
   </section>
 </header>
@@ -54,7 +54,7 @@
                                       <br> city of <span class="pasteboard__title--city">Rostov-on-Don</span></h1>
         <p class="pasteboard__subtitle">Get ready-made turnkey repairs on time with work time saving
           up to 45 days and 20% from cost of materials due to the organization of work</p>
-        <section class="button-wrapper">
+        <section class="pasteboard__wrapper">
           <button class="pasteboard__btn btn btn--fill">CALCULATE THE COST</button>
           <button class="pasteboard__btn btn">SUBMIT YOUR APPLICATION</button>
         </section>
@@ -69,7 +69,7 @@
         <p class="projectInfo__desc">Only a small part of the work performed by our
           company is presented on the site. For 14 years on in the construction
           market we have made happy more than 1000 families</p>
-        <section class="projectInfo__general houseDetails">
+        <section class="projectInfo__general display houseDetails">
            <div class="houseDetails__item">
                <h3 class="houseDetails__title">City:</h3>
                <p class="houseDetails__info">Rostov-on-Don LCD admiral</p>
@@ -110,6 +110,26 @@
           <button class="gallery__btn gallery__btn--right"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
         </section>
       </article>
+      <article class="hidden">
+        <section class="projectInfo__general houseDetails">
+          <div class="houseDetails__item">
+            <h3 class="houseDetails__title">City:</h3>
+            <p class="houseDetails__info">Rostov-on-Don LCD admiral</p>
+          </div>
+          <div class="houseDetails__item">
+            <h3 class="houseDetails__title">Apartment area:</h3>
+            <p class="houseDetails__info">81 m2</p>
+          </div>
+          <div class="houseDetails__item">
+            <h3 class="houseDetails__title">Repair time:</h3>
+            <p class="houseDetails__info">3.5 months</p>
+          </div>
+          <div class="houseDetails__item">
+            <h3 class="houseDetails__title">Repair Cost:</h3>
+            <p class="houseDetails__info">Upon request</p>
+          </div>
+        </section>
+      </article>
     </div>
   </section>
 
@@ -140,24 +160,22 @@
             from one of our facilities! Leave a request below and you will receive a link to the broadcast.</p>
           </section>
           <form class="videoControl__form form" action="">
-              <div class="form__wrapper">
-                 <section class="form__item">
-                    <label for="watcher-name" class="form__label">Name: </label>
-                    <input type="text" class="form__input" id="watcher-name" placeholder="What is your name:">
-                 </section>
-                 <section class="form__item">
-                    <label for="watcher-phone" class="form__label">Phone: </label>
-                    <input type="tel" class="form__input" id="watcher-phone" placeholder="Your phone number:">
-                 </section>
-                 <section class="form__item">
-                    <button class="form__submit btn btn--fill" type="submit">Submit</button>
-                 </section>
-              </div>
-              <section class="form__item form__item--check">
-                <label for="watcher-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
-                <input type="checkbox" class="form__input form__input" id="watcher-agree">
-                <span class="form__check"></span>
-              </section>
+            <section class="form__item">
+              <label for="watcher-name" class="form__label">Name: </label>
+              <input type="text" class="form__input" id="watcher-name" placeholder="What is your name:">
+            </section>
+            <section class="form__item">
+              <label for="watcher-phone" class="form__label">Phone: </label>
+              <input type="tel" class="form__input" id="watcher-phone" placeholder="Your phone number:">
+            </section>
+            <section class="form__item form__item--check">
+              <label for="watcher-agree" class="form__label form__label--check">I agree to the processing of personal data</label>
+              <input type="checkbox" class="form__input form__input" id="watcher-agree">
+              <span class="form__check"></span>
+            </section>
+            <section class="form__item">
+              <button class="form__submit btn btn--fill" type="submit">Submit</button>
+            </section>
           </form>
       </div>
   </section>
@@ -295,6 +313,7 @@
             <img src="src/images/realize_2.png" alt=" " class="archGallery__img">
             <img src="src/images/realize_3.png" alt=" " class="archGallery__img">
             <img src="src/images/realize_4.png" alt=" " class="archGallery__img">
+            <img src="src/images/realize_mobile.png" alt=" " class="archGallery__img archGallery__img--hidden">
           </section>
         </section>
      </div>
