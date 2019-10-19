@@ -94,6 +94,9 @@ a {
   .header & {
     @include d-flex(space-around);
     padding: 2.5*$padding-base 0;
+    @media screen and (max-width: $width-mobile-lg){
+      padding: 0;
+    }
   }
   .completedProject & {
     @include d-flex(normal, center);
@@ -260,6 +263,15 @@ a {
       margin: 2*$padding-base 0;
     }
   }
+  @media screen and (max-width: $width-mobile-sm){
+    &__share {
+      display: none;
+    }
+    &__desc {
+      width: 100%;
+      padding: 15*$padding-base $padding-base 8*$padding-base;
+    }
+  }
 }
 
 .completedProject {
@@ -294,6 +306,11 @@ a {
     }
     .display {
       display: none;
+    }
+  }
+  @media screen and (max-width: $width-mobile-lg){
+    .hidden {
+      padding: 0 20px;
     }
   }
 }
